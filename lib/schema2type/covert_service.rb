@@ -35,7 +35,7 @@ module Schema2type
       module Schema
         def self.define(*arg)
           converted_types = yield
-          converted_type_lines = converted_types.map { |t| "  #{t}" }.join("\n").strip
+          converted_type_lines = converted_types.map { |t| "#{t}" }.join("\n").strip
           {
             lines: converted_type_lines,
             version: arg[0][:version]
